@@ -67,10 +67,16 @@
       <div>
         <h4 class="font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">其他</h4>
         <ul class="space-y-3 bg-gray-50 dark:bg-gray-800/30 p-4 rounded-lg">
-          <li class="flex items-center gap-3 text-sm group cursor-pointer">
-            <i class="fa-brands fa-qq text-blue-400 group-hover:text-blue-500 transition-colors"></i>
-            <span class="font-mono font-medium text-gray-700 dark:text-gray-300">1091736231</span>
-            <span class="text-[10px] text-blue-500 border border-blue-200 bg-blue-50 px-1.5 py-0.5 rounded uppercase tracking-wide ml-auto">Group</span>
+          <li class="relative flex items-center gap-3 text-sm group cursor-pointer">
+            <i class="fa-brands fa-weixin text-green-600 group-hover:text-green-700 transition-colors text-lg shrink-0"></i>
+            <span class="font-medium text-gray-700 dark:text-gray-300 truncate">机器学习系统2026春...</span>
+            <span class="text-[10px] text-green-600 border border-green-200 bg-green-50 px-1.5 py-0.5 rounded uppercase tracking-wide ml-auto shrink-0">Group</span>
+            
+            <!-- QR Code Tooltip -->
+            <div class="absolute bottom-full right-0 mb-2 w-48 p-3 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <img src="/wx.png" alt="WeChat QR" class="w-full h-auto rounded-lg" />
+              <div class="text-xs text-center text-gray-500 mt-2 font-medium">机器学习系统2026春课程讨论</div>
+            </div>
           </li>
           <li class="flex items-center gap-3 text-sm text-gray-500">
             <i class="fa-solid fa-upload w-4 text-center"></i>
