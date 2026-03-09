@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vp-c-brand-1: #004191;
+  --vp-c-brand-2: #1a5ba3;
+  --vp-c-brand-3: #002f6c;
+  
+  /* Navbar Overrides */
+  --vp-nav-bg-color: var(--vp-c-brand-1);
+  --vp-nav-screen-bg-color: var(--vp-c-brand-1);
+  --vp-c-text-1: #1f2937; /* Default text color */
+}
+
+.dark {
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #60a5fa;
+  --vp-c-brand-3: #2563eb;
+  
+  --vp-c-text-1: #e5e7eb;
+}
+
+/* Custom Block Styles */
+.custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+  background-color: rgba(0, 65, 145, 0.05);
+}
+
+.dark .custom-block.tip {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Table Styles */
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+/* Navbar Customization (Deep Blue) */
+.VPNav {
+  background-color: var(--vp-c-brand-1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure navbar content is visible on blue background */
+.VPNavBarTitle .title {
+  color: white !important;
+}
+
+.VPNavBarMenuLink {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.VPNavBarMenuLink.active {
+  color: white !important;
+  border-bottom-color: white !important;
+}
+
+.VPNavBarMenuLink:hover {
+  color: white !important;
+}
+
+/* Search Box Style Fix */
+.VPNavBarSearch .DocSearch-Button {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+.VPNavBarSearch .DocSearch-Button:hover {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+.VPNavBarSearch .DocSearch-Button-Placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.VPNavBarSearch .DocSearch-Search-Icon {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Social Links & Theme Toggle */
+.VPSocialLink {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.VPSocialLink:hover {
+  color: white !important;
+}
+
+.VPSwitchAppearance .check {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.VPSwitchAppearance:hover .check {
+  color: white !important;
+}
+
+/* Mobile Menu Button */
+.VPNavBarHamburger .container .top,
+.VPNavBarHamburger .container .middle,
+.VPNavBarHamburger .container .bottom {
+  background-color: white !important;
+}
