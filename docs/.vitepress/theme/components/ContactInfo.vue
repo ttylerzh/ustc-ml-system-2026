@@ -15,7 +15,7 @@
           </div>
           <div class="flex flex-col">
             <span class="font-bold text-lg text-gray-900 dark:text-gray-100">张燕咏</span>
-            <a href="mailto:yyz@ustc.edu.cn" class="text-sm text-gray-500 hover:text-ustc transition-colors break-all mt-1">yyz@ustc.edu.cn</a>
+            <a href="mailto:yanyongz@ustc.edu.cn" class="text-sm text-gray-500 hover:text-ustc transition-colors break-all mt-1">yanyongz@ustc.edu.cn</a>
           </div>
         </div>
         
