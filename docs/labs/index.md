@@ -14,10 +14,10 @@
 
 | Lab | Topic | Release Date | Due Date |
 | :--- | :--- | :--- | :--- |
-| **Lab 1** | [Qwen3 Deployment](./lab1.md) | Mar 19 | Apr 02 |
-| **Lab 2** | [Performance Analysis](./lab2.md) | Apr 02 | Apr 16 |
-| **Lab 3** | [vLLM Scheduling](./lab3.md) | Apr 16 | Apr 30 |
-| **Final Project** | [Project Guidelines](./final-project.md) | May 07 | Jun 10 |
+| **Lab 1** | [Qwen3 Deployment](./lab1.md) | 待定 | 待定 |
+| **Lab 2** | [Performance Analysis](./lab2.md) | 待定 | 待定 |
+| **Lab 3** | [vLLM Scheduling](./lab3.md) | 待定 | 待定 |
+| **Final Project** | [Project Guidelines](./final-project.md) | 待定 | 待定 |
 
 ## Submission Policy
 
