@@ -1,34 +1,40 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 
-const countdown = ref('')
-const targetDate = new Date('2026-03-25T23:59:59').getTime()
-let timer = null
+// 将初始值直接设为“待定”
+const countdown = ref('待定')
 
-const updateCountdown = () => {
-  const now = new Date().getTime()
-  const distance = targetDate - now
+// 逻辑已简化，移除不再需要的 targetDate 和计时器逻辑
+// import { ref, onMounted, onUnmounted } from 'vue'
+
+// const countdown = ref('')
+// const targetDate = new Date('2026-03-25T23:59:59').getTime()
+// let timer = null
+
+// const updateCountdown = () => {
+//   const now = new Date().getTime()
+//   const distance = targetDate - now
   
-  if (distance < 0) {
-    countdown.value = "EXPIRED"
-    return
-  }
+//   if (distance < 0) {
+//     countdown.value = "EXPIRED"
+//     return
+//   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+//   const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+//   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+//   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
   
-  countdown.value = `${days}d ${hours}h ${minutes}m`
-}
+//   countdown.value = `${days}d ${hours}h ${minutes}m`
+// }
 
-onMounted(() => {
-  updateCountdown()
-  timer = setInterval(updateCountdown, 60000)
-})
+// onMounted(() => {
+//   updateCountdown()
+//   timer = setInterval(updateCountdown, 60000)
+// })
 
-onUnmounted(() => {
-  if (timer) clearInterval(timer)
-})
+// onUnmounted(() => {
+//   if (timer) clearInterval(timer)
+// })
 </script>
 
 <template>
