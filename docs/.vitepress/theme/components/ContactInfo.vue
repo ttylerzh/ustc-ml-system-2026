@@ -80,7 +80,11 @@
           </li>
           <li class="flex items-center gap-3 text-sm text-gray-500">
             <i class="fa-solid fa-upload w-4 text-center"></i>
-            <span>作业提交：<span class="italic">待定</span></span>
+            <span>作业提交：
+              <a href="https://yjs1.ustc.edu.cn/" target="_blank" class="text-ustc hover:underline">
+                https://yjs1.ustc.edu.cn/
+              </a>
+            </span>
           </li>
         </ul>
       </div>
