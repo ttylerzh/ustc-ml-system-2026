@@ -10,9 +10,16 @@ const schedule = [
     video: false,
     pdf: '/slides/lec01.pdf'
   },
-  { week: 2, date: 'Mar 17', topic: '第二章 机器学习与框架基础', video: false },
+    { 
+    week: 2, 
+    date: 'Mar 17', 
+    topic: '第二章 机器学习与框架基础', 
+    lab: 'Lab 1 Released (10%)', 
+    video: false,
+    pdf: '/slides/lec02.pdf'
+  },
   { week: 3, date: 'Mar 24', topic: '第三章 GPU框架与CUDA编程', lab: '', video: true },
-  { week: 4, date: 'Mar 31', topic: '第四章 Transformer和大语言模型', lab: 'Lab 1 Released (10%)', video: true },
+  { week: 4, date: 'Mar 31', topic: '第四章 Transformer和大语言模型', lab: '', video: true },
   { week: 5, date: 'Apr 7', topic: '第五章 混合专家模型', lab: '', video: true },
   { week: 6, date: 'Apr 14', topic: '第六章 数据并行与模型并行', lab: '', video: true },
   { week: 7, date: 'Apr 21', topic: '第七章 模型剪枝', lab: '', video: true },
