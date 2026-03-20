@@ -2,8 +2,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const countdown = ref('')
-// 设置截止日期：2026年3月29日 23:59:59
-const targetDate = new Date('2026-03-29T23:59:59').getTime()
+// 设置截止日期：2026年3月30日 23:59:59
+const targetDate = new Date('2026-03-30T23:59:59').getTime()
 let timer = null
 
 const updateCountdown = () => {
@@ -61,7 +61,7 @@ onUnmounted(() => {
       
       <div class="flex justify-between items-center text-sm opacity-75">
         <p>Distance to submission</p>
-        <p>Mar 29, 23:59</p>
+        <p>Mar 30, 23:59</p>
       </div>
     </div>
   </div>
