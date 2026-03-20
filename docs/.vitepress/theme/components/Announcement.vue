@@ -6,7 +6,7 @@
     <ul class="!list-none !pl-0 space-y-3">
       <li class="flex gap-3 text-sm">
         <span class="font-mono text-gray-400">03-20</span>
-        <span class="flex-1">Lab1 实验要求已经发布，截止时间 3 月 29 日晚 23:59。</span>
+        <span class="flex-1">Lab1 实验要求已经发布，截止时间 3 月 30 日晚 23:59。</span>
         <span class="text-red-500 text-xs font-bold px-1.5 py-0.5 bg-red-50 dark:bg-red-900/20 rounded">Hot</span>
       </li>
       <li class="flex gap-3 text-sm">
