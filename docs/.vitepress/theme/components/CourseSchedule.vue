@@ -27,7 +27,13 @@ const schedule = [
       pdf: '/slides/lec03.pdf'
   },
       
-  { week: 4, date: 'Mar 31', topic: '第四章 Transformer和大语言模型', lab: '', video: true },
+      { week: 4, 
+        date: 'Mar 31', 
+        topic: '第四章 Transformer和大语言模型', 
+        lab: '', 
+        video: false, 
+        pdf: '/slides/lec04.pdf'
+  },
   { week: 5, date: 'Apr 7', topic: '第五章 混合专家模型', lab: '', video: true },
   { week: 6, date: 'Apr 14', topic: '第六章 数据并行与模型并行', lab: '', video: true },
   { week: 7, date: 'Apr 21', topic: '第七章 模型剪枝', lab: '', video: true },
