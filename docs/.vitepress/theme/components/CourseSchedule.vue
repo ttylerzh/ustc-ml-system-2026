@@ -34,7 +34,13 @@ const schedule = [
         video: false, 
         pdf: '/slides/lec04.pdf'
   },
-  { week: 5, date: 'Apr 7', topic: '第五章 混合专家模型', lab: '', video: true },
+      { week: 5,
+        date: 'Apr 7',
+        topic: '第五章 混合专家模型',
+        lab: '',
+        video: false,
+        pdf: '/slides/lec05.pdf'
+  },
   { week: 6, date: 'Apr 14', topic: '第六章 数据并行与模型并行', lab: '', video: true },
   { week: 7, date: 'Apr 21', topic: '第七章 模型剪枝', lab: '', video: true },
   { week: 8, date: 'Apr 28', topic: '第八章 模型量化', lab: '', video: true },
