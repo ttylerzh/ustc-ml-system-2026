@@ -208,7 +208,7 @@ $$\text{FFN}(x) = \left(\text{SiLU}(xW_{\text{gate}}) \odot xW_{\text{up}}\right
 | 所在区域 | Compute / Memory ? | Compute / Memory ? |
 
 > **提示**：
-> - 每次矩阵乘的 FLOPs ≈ $2 \times M \times N \times K$（$M$ 行 $\times$ $K$ 列的矩阵乘以 $K$ 行 $\times$ $N$ 列的矩阵）
+> - 每次矩阵乘的 FLOPs ≈ $2 \times M \times N \times K$（ $M$ 行 $\times$ $K$ 列的矩阵乘以 $K$ 行 $\times$ $N$ 列的矩阵）
 > - Bytes 需要考虑：权重读取（三个权重矩阵各 $d \times d_{\text{ff}} \times 2$ Bytes）+ 输入/输出激活的读写
 > - Decode 阶段 $N=1$ 时，Bytes 被权重读取主导（因为权重大小与 $N$ 无关），算术强度会非常低
 
