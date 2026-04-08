@@ -199,8 +199,8 @@ $$\text{FFN}(x) = \left(\text{SiLU}(xW_{\text{gate}}) \odot xW_{\text{up}}\right
 
 **请推导以下内容并填表：**
 
-| 项目 | Prefill ($B=1, S=512$) | Decode ($B=1, S=1$) |
-|------|:----------------------:|:-------------------:|
+| 项目 | Prefill ( $B=1, S=512$ ) | Decode ($B=1, S=1$) |
+|------|:-----------------------:|:-------------------:|
 | Token 数 $N$ | $512$ | $1$ |
 | FLOPs（三个矩阵乘的总计算量）| $\approx 3 \times 2Nd \cdot d_{\text{ff}}$ | $\approx 3 \times 2d \cdot d_{\text{ff}}$ |
 | Bytes（权重加载 + 激活读写）| | |
@@ -219,7 +219,7 @@ Attention 的计算包含 QKV Projection、 $QK^T$ Score 计算、Softmax、 $\t
 **请推导以下内容并填表：**
 
 | 项目 | Prefill ( $B=1, S=512$ ) | Decode ( $B=1, S=1$, KV Cache 长度= $L$ ) |
-|------|:----------------------:|:--------------------------------------:|
+|------|:-----------------------:|:--------------------------------------:|
 | QKV Projection FLOPs | | |
 | Attention Score $QK^T$ FLOPs | | |
 | $\text{Score} \times V$ FLOPs | | |
@@ -244,8 +244,9 @@ Attention 的计算包含 QKV Projection、 $QK^T$ Score 计算、Softmax、 $\t
 #### Part D：与实测数据交叉验证
 
 将 Task 1 中实测的各模块耗时换算为**实际达到的算力** (Achieved FLOPS)：
-
-$$\text{Achieved FLOPS} = \frac{\text{FLOPs（理论计算量）}}{\text{实测耗时 (s)}}$$
+$$
+\text{Achieved FLOPS}=\frac{\text{Theoretical FLOPs}}{\text{Measured time (s)}}
+$$
 
 在 Roofline 图中将实测点一并标注，观察其是否落在理论上界线附近。如果偏离较大，请分析可能的原因（如 Kernel 启动开销、内存碎片、Padding 等）。
 

@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
+import 'katex/dist/katex.min.css'
 import './style.css'
 import CourseSchedule from './components/CourseSchedule.vue'
 import DeadlineCountdown from './components/DeadlineCountdown.vue'
