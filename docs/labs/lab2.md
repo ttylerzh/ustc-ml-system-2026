@@ -264,7 +264,7 @@ Qwen3-0.6B 的关键配置参数（请从模型 `config.json` 中确认实际值
 | 参数 | 符号 | 值 |
 |------|------|-----|
 | 隐藏层数 | $n_{\text{layers}}$ | 请查阅 |
-| KV Head 数 | $n_{\text{kv\_heads}}$ | 请查阅 |
+| KV Head 数 | $$n_{\text{kv\_heads}}$$ | 请查阅 |
 | Head 维度 | $d_{\text{head}}$ | $= d_{\text{model}} / n_{\text{heads}}$ |
 | 数据精度 | $b$ | 2 Bytes (BF16) |
 
