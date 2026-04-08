@@ -214,11 +214,11 @@ $$\text{FFN}(x) = \left(\text{SiLU}(xW_{\text{gate}}) \odot xW_{\text{up}}\right
 
 #### Part B：Self-Attention 的 Roofline 分析
 
-Attention 的计算包含 QKV Projection、$$QK^T$$ Score 计算、Softmax、$$\text{Score} \times V$$、Output Projection。
+Attention 的计算包含 QKV Projection、 $QK^T$ Score 计算、Softmax、 $\text{Score} \times V$ 、Output Projection。
 
 **请推导以下内容并填表：**
 
-| 项目 | Prefill ($B=1, S=512$) | Decode ($B=1, S=1$, KV Cache 长度=$L$) |
+| 项目 | Prefill ( $B=1, S=512$ ) | Decode ( $B=1, S=1$, KV Cache 长度= $L$ ) |
 |------|:----------------------:|:--------------------------------------:|
 | QKV Projection FLOPs | | |
 | Attention Score $QK^T$ FLOPs | | |
