@@ -270,13 +270,13 @@ Qwen3-0.6B 的关键配置参数（请从模型 `config.json` 中确认实际值
 
 **单个 Token 的 KV Cache 占用：**
 
-$$\text{KV}_{\text{per\_token}} = 2 \times n_{\text{layers}} \times n_{\text{kv\_heads}} \times d_{\text{head}} \times b \quad (\text{Bytes})$$
+$$\text{KV}_{\text{per token}} = 2 \times n_{\text{layers}} \times n_{\text{kv heads}} \times d_{\text{head}} \times b \quad (\text{Bytes})$$
 
 > 因子 2 来自 Key 和 Value 各一份。
 
 **给定序列长度 $L$ 和 Batch Size $B$ 的总 KV Cache 占用：**
 
-$$\text{KV}_{\text{total}} = B \times L \times \text{KV}_{\text{per\_token}} \quad (\text{Bytes})$$
+$$\text{KV}_{\text{total}} = B \times L \times \text{KV}_{\text{per token}} \quad (\text{Bytes})$$
 
 **请填写以下理论预测表（假设 BF16）：**
 
