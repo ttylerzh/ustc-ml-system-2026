@@ -41,7 +41,13 @@ const schedule = [
         video: false,
         pdf: '/slides/lec05.pdf'
   },
-  { week: 6, date: 'Apr 14', topic: '第六章 数据并行与模型并行', lab: '', video: true },
+      { week: 6, 
+        date: 'Apr 14', 
+        topic: '第六章 数据并行与模型并行', 
+        lab: '', 
+        video: false,
+        pdf: '/slides/lec06.pdf'
+  },
   { week: 7, date: 'Apr 21', topic: '第七章 模型剪枝', lab: '', video: true },
   { week: 8, date: 'Apr 28', topic: '第八章 模型量化', lab: '', video: true },
   { week: 9, date: 'May 5', topic: '第九章 机器学习图优化', lab: '', video: true },
