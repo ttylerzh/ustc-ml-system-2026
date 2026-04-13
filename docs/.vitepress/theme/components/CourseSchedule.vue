@@ -37,7 +37,7 @@ const schedule = [
       { week: 5,
         date: 'Apr 7',
         topic: '第五章 混合专家模型',
-        lab: '',
+        lab: 'Lab 2 Released (20%)', 
         video: false,
         pdf: '/slides/lec05.pdf'
   },
