@@ -48,7 +48,13 @@ const schedule = [
         video: false,
         pdf: '/slides/lec06.pdf'
   },
-  { week: 7, date: 'Apr 21', topic: '第七章 模型剪枝', lab: '', video: true },
+      { week: 7,
+        date: 'Apr 21',
+        topic: '第七章 模型剪枝',
+        lab: '',
+        video: false,
+        pdf: '/slides/lec07.pdf' 
+  },
   { week: 8, date: 'Apr 28', topic: '第八章 模型量化', lab: '', video: true },
   { week: 9, date: 'May 5', topic: '第九章 机器学习图优化', lab: '', video: true },
   { week: 10, date: 'May 12', topic: '第十章 大语言模型部署', lab: '', video: true },
