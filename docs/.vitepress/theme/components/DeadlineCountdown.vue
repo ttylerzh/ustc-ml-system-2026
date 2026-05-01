@@ -1,40 +1,35 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const countdown = ref('')
-// 设置截止日期：2026年3月30日 23:59:59
-const targetDate = new Date('2026-04-20T23:59:59').getTime()
+const days = ref('00')
+const hours = ref('00')
+const minutes = ref('00')
+const seconds = ref('00')
+const isExpired = ref(false)
+
+const targetDate = new Date('2026-06-14T23:59:59').getTime()
 let timer = null
+
+const pad = (num) => String(num).padStart(2, '0')
 
 const updateCountdown = () => {
   const now = new Date().getTime()
   const distance = targetDate - now
 
   if (distance < 0) {
-    countdown.value = "已截止"
+    isExpired.value = true
     if (timer) clearInterval(timer)
     return
   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-
-  // 补零函数，让显示更整齐
-  const pad = (num) => String(num).padStart(2, '0')
-  
-  if (days > 0) {
-    countdown.value = `${days}d ${pad(hours)}h ${pad(minutes)}m`
-  } else {
-    // 最后一天显示秒，增加紧迫感
-    countdown.value = `${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`
-  }
+  days.value = String(Math.floor(distance / (1000 * 60 * 60 * 24)))
+  hours.value = pad(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+  minutes.value = pad(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
+  seconds.value = pad(Math.floor((distance % (1000 * 60)) / 1000))
 }
 
 onMounted(() => {
   updateCountdown()
-  // 每秒更新一次，如果是为了省电也可以改为 60000 (每分钟)
   timer = setInterval(updateCountdown, 1000)
 })
 
@@ -44,24 +39,52 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="p-6 rounded-xl bg-gradient-to-br from-ustc to-blue-800 text-white shadow-lg relative overflow-hidden group mb-6">
+  <div class="p-6 rounded-2xl bg-gradient-to-br from-ustc to-blue-800 text-white shadow-lg relative overflow-hidden group mb-6">
+    <!-- 背景装饰图标 -->
     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
       <i class="fa-solid fa-clock-rotate-left fa-4x"></i>
     </div>
-    
+
     <div class="relative z-10">
-      <h3 class="!text-white !mt-0 !mb-2 text-lg opacity-90 font-bold flex items-center gap-2">
+      <!-- 标题 -->
+      <h3 class="!text-white !mt-0 !mb-4 text-base opacity-85 font-semibold flex items-center gap-2">
         <i class="fa-solid fa-hourglass-half animate-pulse"></i>
-        Next Deadline: Lab2
+        Next Deadline: Lab3
       </h3>
-      
-      <div class="text-4xl font-mono font-bold mb-2 tracking-tighter">
-        {{ countdown }}
+
+      <!-- 已截止状态 -->
+      <div v-if="isExpired" class="text-3xl font-bold mb-4 text-red-300">
+        已截止
       </div>
-      
-      <div class="flex justify-between items-center text-sm opacity-75">
-        <p>Distance to submission</p>
-        <p>Apr 20, 23:59</p>
+
+      <!-- 倒计时块 -->
+      <div v-else class="flex gap-2 mb-4">
+        <!-- Days -->
+        <div class="flex-1 bg-white/15 rounded-xl py-2 px-1 text-center">
+          <div class="text-3xl font-mono font-bold leading-none">{{ days }}</div>
+          <div class="text-xs opacity-60 mt-1 uppercase tracking-widest">days</div>
+        </div>
+        <!-- Hours -->
+        <div class="flex-1 bg-white/15 rounded-xl py-2 px-1 text-center">
+          <div class="text-3xl font-mono font-bold leading-none">{{ hours }}</div>
+          <div class="text-xs opacity-60 mt-1 uppercase tracking-widest">hours</div>
+        </div>
+        <!-- Minutes -->
+        <div class="flex-1 bg-white/15 rounded-xl py-2 px-1 text-center">
+          <div class="text-3xl font-mono font-bold leading-none">{{ minutes }}</div>
+          <div class="text-xs opacity-60 mt-1 uppercase tracking-widest">mins</div>
+        </div>
+        <!-- Seconds（最后一天显示） -->
+        <div v-if="days === '0'" class="flex-1 bg-white/15 rounded-xl py-2 px-1 text-center">
+          <div class="text-3xl font-mono font-bold leading-none">{{ seconds }}</div>
+          <div class="text-xs opacity-60 mt-1 uppercase tracking-widest">secs</div>
+        </div>
+      </div>
+
+      <!-- 底部截止日期 -->
+      <div class="flex justify-between items-center bg-white/10 rounded-xl px-3 py-2">
+        <span class="text-xs opacity-60">Distance to submission</span>
+        <span class="text-xs font-medium bg-white/15 rounded-md px-2 py-1">Jun 14, 23:59</span>
       </div>
     </div>
   </div>
