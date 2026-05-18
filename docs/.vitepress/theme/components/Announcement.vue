@@ -1,10 +1,14 @@
 <script setup>
 const announcements = [
   {
-    date: '2026-05-01',
-    content: 'Lab3 实验要求已经发布，截止时间 6 月 14 日 23:59。',
+    date: '2026-05-18',
+    content: 'Final project 实验要求已经发布，截止时间 6 月 19 日 23:59。',
     badge: { text: 'New', type: 'hot' },
-    highlight: '6 月 14 日 23:59'
+    highlight: '6 月 19 日 23:59'
+  },
+  {
+    date: '2026-05-01',
+    content: 'Lab3 实验要求已经发布，截止时间 6 月 14 日 23:59。'
   },
   {
     date: '2026-04-08',

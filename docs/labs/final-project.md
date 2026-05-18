@@ -89,7 +89,7 @@
 **论文**:*EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty*
 
 **关键观察**
-- 传统投机解码用"小 LM 直接预测下一个 token"。EAGLE 的洞察是:**直接预测 token 难,因为 token 空间是高熵离散的**;但 target 模型 **second-to-top layer** 的 hidden feature 信息更稠密、更平滑,且观察发现由于语义平滑,相邻token的feature是比较接近的,**在 feature 空间做自回归更容易学**。
+- 传统投机解码用"小 LM 直接预测下一个 token"。EAGLE 的洞察是:**直接预测 token 难,因为 token 空间是高熵离散的**;而 target 模型 **second-to-top layer** 的 hidden feature 信息更稠密、更平滑,且观察发现由于语义平滑,相邻 token 的 feature 是比较接近的,**在 feature 空间做自回归更容易学**。
 - 但 feature prediction 仍存在 **uncertainty**(真实部署中,生成token一般是temperature sample或top-K sampling的,所以同一 feature 会对应多个合理预测的 token,同一个$f_t$
 在数据里对应多个不同的$f_{t+1}$)。
 
