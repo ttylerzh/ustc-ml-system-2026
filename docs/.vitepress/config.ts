@@ -30,7 +30,8 @@ export default defineConfig({
               items: [
                 { text: 'Lab 1', link: '/labs/lab1' },
                 { text: 'Lab 2', link: '/labs/lab2' },
-                { text: 'Lab 3', link: '/labs/lab3' }
+                { text: 'Lab 3', link: '/labs/lab3' },
+                { text: 'Final Project', link: '/labs/final-project'}
               ]
             }
           ]
@@ -43,7 +44,8 @@ export default defineConfig({
             { text: 'Environment Setup', link: '/labs/setup' },
             { text: 'Lab 1', link: '/labs/lab1' },
             { text: 'Lab 2', link: '/labs/lab2' },
-            { text: 'Lab 3', link: '/labs/lab3' }
+            { text: 'Lab 3', link: '/labs/lab3' },
+            { text: 'Final Project', link: '/labs/final-project'}
           ]
         }
       ],
