@@ -57,7 +57,7 @@ const schedule = [
   },
   { week: 8, date: 'Apr 28', topic: '第八章 模型量化', lab: 'Lab 3 Released (20%)', video: false, pdf: '/slides/lec08.pdf'  },
   { week: 9, date: 'May 5', topic: ' 五一假期', lab: '', video: false  },
-  { week: 10, date: 'May 12', topic: '第九章 机器学习图优化, lab: '', video: true , pdf: '/slides/lec09.pdf' },
+  { week: 10, date: 'May 12', topic: '第九章 机器学习图优化', lab: '', video: true , pdf: '/slides/lec09.pdf' },
   { week: 11, date: 'May 19', topic: '客座讲座', lab: '', video: true },
   { week: 12, date: 'May 26', topic: '第十章 大语言模型部署', lab: '', video: true ,pdf: '/slides/lec10.pdf'},
   { week: 13, date: 'Jun 2', topic: '第十三章 课程项目展示与总结', lab: '', video: false },
